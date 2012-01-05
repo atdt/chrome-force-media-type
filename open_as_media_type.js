@@ -22,8 +22,8 @@
                     is_redirect = false;
 
                 if (details.tabId === target_tab) {
-                    // This is the request we're meant to intercept; go ahead
-                    // and patch headers.
+                    // This is the request we want to intercept: the tab IDs
+                    // and request URLs match.
                     headers.forEach(function (header) {
                         switch (header.name.toLowerCase()) {
                         case 'content-type':
@@ -40,8 +40,8 @@
                         }
                     });
                     headers_received.removeListener(patch_headers);
-                    // if it's a redirect, re-add a listener, specifying the
-                    // new url as the url filter:
+                    // If it's a redirect, re-add a listener, specifying the
+                    // new url as the url filter
                     if (is_redirect) {
                         headers_received.addListener(
                             patch_headers(media_type),
@@ -56,7 +56,7 @@
         },
         click_handler = function (media_type) {
             var handler = function (info) {
-                // open the requested url in a new tab
+                // Open the requested url in a new tab
                 target_url = info.linkUrl;
                 headers_received.addListener(
                     patch_headers(media_type),
