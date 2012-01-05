@@ -11,7 +11,7 @@
 window.onload = function () {
     "use strict";
 
-    var extratypes = localStorage.extratypes || '',
+    var extra_types = localStorage.extra_types || '',
         alert = document.getElementById('alert'),
         button = document.getElementById('save'),
         textarea = document.getElementById('types');
@@ -21,9 +21,9 @@ window.onload = function () {
     };
 
     button.onclick = function () {
-        localStorage.extratypes = textarea.value;
+        localStorage.extra_types = textarea.value;
         alert.classList.remove('transparent');
     };
 
-    textarea.value = extratypes;
+    textarea.value = extra_types;
 };

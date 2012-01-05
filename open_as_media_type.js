@@ -12,8 +12,6 @@
     "use strict";
     var headers_received = chrome.webRequest.onHeadersReceived,
         media_types = ['text/html', 'text/plain'],
-        extra_types = [],  // User-defined media types
-        parent_id = 0,     // Top-most context-menu item
         target_tab = 0,
         target_url = '',
         patch_headers = function (media_type) {
@@ -55,6 +53,7 @@
             return callback;
         },
         click_handler = function (media_type) {
+            // Handle a context menu item click
             var handler = function (info) {
                 // Open the requested url in a new tab
                 target_url = info.linkUrl;
@@ -70,27 +69,37 @@
             return handler;
         },
         uniquify = function (array) {
+            // Remove duplicate items from array
             return array.filter(function (val, i) {
                 return i === array.indexOf(val);
             });
+        },
+        build_menus = function () {
+            // Create right-click context menu items
+            var extra_types = (localStorage.extra_types || '').split('\n'),
+                types = uniquify(media_types.concat(extra_types)),
+                parent_id;
+
+            parent_id = chrome.contextMenus.create({
+                title: "Open as media type\u2026",
+                contexts: ['link']
+            });
+
+            types.forEach(function (media_type) {
+                chrome.contextMenus.create({
+                    title: media_type,
+                    contexts: ['link'],
+                    parentId: parent_id,
+                    onclick: click_handler(media_type)
+                });
+            });
+        },
+        options_updated_handler = function (e) {
+            // Listen to StorageEvents and update menus as necessary
+            if (e.key === 'extra_types' && e.newValue !== e.oldValue) {
+                chrome.contextMenus.removeAll(build_menus);
+            }
         };
-
-    // Load user-configured media types, if any
-    extra_types = (localStorage.extra_types || '').split('\n');
-    media_types.concat(extra_types);
-    media_types = uniquify(media_types);
-
-    // Context menu items
-    parent_id = chrome.contextMenus.create({
-        title: "Open as media type\u2026",
-        contexts: ['link']
-    });
-    media_types.forEach(function (media_type) {
-        chrome.contextMenus.create({
-            title: media_type,
-            contexts: ['link'],
-            parentId: parent_id,
-            onclick: click_handler(media_type)
-        });
-    });
+    build_menus();
+    window.addEventListener('storage', options_updated_handler);
 }());
