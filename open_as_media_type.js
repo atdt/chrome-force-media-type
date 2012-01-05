@@ -91,7 +91,7 @@
                     chrome.contextMenus.create({
                         type: 'separator',
                         contexts: ['link'],
-                        parentId: parent_id,
+                        parentId: parent_id
                     });
                 }
                 // Create the menu item for this type
