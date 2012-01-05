@@ -85,7 +85,16 @@
                 contexts: ['link']
             });
 
-            types.forEach(function (media_type) {
+            types.forEach(function (media_type, index) {
+                // Create at separator before user-set media types
+                if (index === media_types.length) {
+                    chrome.contextMenus.create({
+                        type: 'separator',
+                        contexts: ['link'],
+                        parentId: parent_id,
+                    });
+                }
+                // Create the menu item for this type
                 chrome.contextMenus.create({
                     title: media_type,
                     contexts: ['link'],
