@@ -1,0 +1,7 @@
+"Open as Media Type" Chrome Extension
+=====================================
+
+This extension adds an entry to the link context (right-click) menu, allowing
+you to open it while forcing a particular media type (MIME). Work around
+annoying web sites that force you to download source code or text files to view
+them rather than simply allowing you to view them in the browser.
