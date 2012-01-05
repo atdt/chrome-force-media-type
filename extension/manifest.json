@@ -1,22 +1,22 @@
 {
-  "name": "Open as Media Type",
-  "description":
-      "Open links as particular media (MIME) types from the context menu.",
-  "version": "1.3",
+  "background_page": "background.html", 
+  "description": "Open links as particular media (MIME) types from the context menu.", 
+  "homepage_url": "https://github.com/atdt/chrome-open-as-media-type", 
+  "icons": {
+    "128": "icons/icon-128.png", 
+    "16": "icons/icon-16.png", 
+    "19": "icons/icon-19.png", 
+    "48": "icons/icon-48.png"
+  }, 
+  "id": "6BDDDE18B6A7E78C7E337544B18B230A74EDA094", 
+  "name": "Open as Media Type", 
+  "options_page": "options.html", 
   "permissions": [
     "tabs", 
-    "contextMenus",
-    "webRequest",
-    "webRequestBlocking",
+    "contextMenus", 
+    "webRequest", 
+    "webRequestBlocking", 
     "<all_urls>"
-  ],
-  "options_page": "options.html",
-  "icons" : {
-    "16" : "icons/icon-16.png",
-    "19" : "icons/icon-19.png",
-    "48" : "icons/icon-48.png",
-    "128" : "icons/icon-128.png"
-  },
-  "background_page": "background.html",
-  "homepage_url": "https://github.com/atdt/chrome-open-as-media-type"
+  ], 
+  "version": "1.3"
 }
