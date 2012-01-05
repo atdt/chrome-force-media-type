@@ -1,7 +1,7 @@
 /*!
  * Open as Media Type Chrome Extension
  *
- * Copyright 2011, Ori Livneh
+ * Copyright 2012, Ori Livneh
  * Licensed under the BSD license; see LICENSE for more details.
  */
 
