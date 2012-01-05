@@ -2,7 +2,7 @@
   "name": "Open as Media Type",
   "description":
       "Open links as particular media (MIME) types from the context menu.",
-  "version": "1.2",
+  "version": "1.3",
   "permissions": [
     "tabs", 
     "contextMenus",
@@ -12,10 +12,10 @@
   ],
   "options_page": "options.html",
   "icons" : {
-    "16" : "icon-16.png",
-    "19" : "icon-19.png",
-    "48" : "icon-48.png",
-    "128" : "icon-128.png"
+    "16" : "icons/icon-16.png",
+    "19" : "icons/icon-19.png",
+    "48" : "icons/icon-48.png",
+    "128" : "icons/icon-128.png"
   },
   "background_page": "background.html",
   "homepage_url": "https://github.com/atdt/chrome-open-as-media-type"
