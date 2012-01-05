@@ -14,7 +14,6 @@
         media_types = [
             // Handy list of media types:
             // http://en.wikipedia.org/wiki/Internet_media_type
-            // TODO: make this customizable
             'text/html',
             'text/plain'
         ],
@@ -89,6 +88,9 @@
         contexts: ['link']
     });
 
+    media_types = media_types.concat(
+            (localStorage.extra_types || '').split('\n'));
+    console.log(media_types);
     media_types.forEach(function (media_type) {
         chrome.contextMenus.create({
             title: media_type,

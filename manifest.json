@@ -10,6 +10,7 @@
     "webRequestBlocking",
     "<all_urls>"
   ],
+  "options_page": "options.html",
   "icons" : {
     "16" : "icon-16.png",
     "19" : "icon-19.png",

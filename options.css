@@ -1,0 +1,76 @@
+body, html, header, h1, p {
+    font: 13px/18px "Helvetica Neue", Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    background: whiteSmoke;
+    color: #222;
+    border-bottom: 1px solid #e5e5e5;
+    height: 64px;
+}
+
+header h1 {
+    line-height: 64px;
+    padding-left: 20px;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+label {
+    font-size: 16px;
+    display: block;
+}
+
+article {
+    padding: 20px;
+    width: 400px;
+}
+div {
+    display: block;
+}
+textarea {
+    resize: none;
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    border-radius: 3px;
+    font-family: Monaco, Andale Mono, Courier New, monospace;
+    width: 300px;
+    color: gray;
+}
+
+
+p.help-text {
+    color: #bfbfbf;
+}
+
+button {
+    line-height: 19px;
+    font-size: 13px;
+}
+
+button, #alert {
+    float: left;
+    padding: 7px 15px;
+    margin: 10px 10px 0 0;
+}
+
+#alert {
+    /* width: 276px; */
+    margin-bottom: 10px;
+    color: white;
+    background: #57a957 -webkit-linear-gradient(top, #62c462, #57a957) repeat-x;
+    text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+    box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.25);
+    -webkit-transition: opacity 0.5s ease-in-out;
+    transition: opacity 0.5s ease-in-out;
+}
+
+aside {
+    clear: both;
+}
+
+.transparent {
+    opacity: 0;
+}

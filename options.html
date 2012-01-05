@@ -1,0 +1,26 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset=utf-8>
+    <title>Open as Media-Type Extension Options</title>
+    <link rel=stylesheet href=options.css>
+  </head>
+  <body>
+    <script src=options.js></script>
+    <header>
+      <h1>Open as Media-Type</h1>
+    </header>
+    <article>
+      <label for=types>Add Additional Internet Media (MIME) Types</label>
+      <textarea id=types cols=40 rows=10 placeholder=text/csv></textarea>
+      <p class=help-text>One type per line; case-insensitive.</p>
+      <div>
+        <button id=save>Save</button>
+        <span id=alert class=transparent><strong>Success!</strong> Preferences saved.</span>
+      </div>
+      <aside>
+        For an up-to-date list of types, see <a href=http://en.wikipedia.org/wiki/Internet_media_type>Internet media type</a> on Wikipedia, or the <a href=http://www.iana.org/assignments/media-types/index.html>official list</a> maintained by the IANA.
+      </aside>
+    </article>
+  </body>
+</html>
