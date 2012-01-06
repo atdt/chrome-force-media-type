@@ -1,7 +1,8 @@
 {
   "name": "Force Media-Type", 
   "description": "Open links as particular media (MIME) types from the context menu.", 
-  "homepage_url": "https://github.com/atdt/chrome-media-type",
+  "homepage_url": "https://github.com/atdt/chrome-force-media-type",
+  "version": "1.4"
   "id": "6BDDDE18B6A7E78C7E337544B18B230A74EDA094", 
   "icons": {
     "128": "icons/icon-128.png", 
@@ -17,6 +18,5 @@
     "webRequest", 
     "webRequestBlocking", 
     "<all_urls>"
-  ], 
-  "version": "1.3"
+  ]
 }
