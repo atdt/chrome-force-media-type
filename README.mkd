@@ -1,5 +1,5 @@
-"Open as Media Type" Chrome Extension
-=====================================
+Force Media-Type Chrome Extension
+=================================
 
 This extension adds an entry to the link context (right-click) menu, allowing
 you to open it while forcing a particular media type (MIME). Work around
