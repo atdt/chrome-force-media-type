@@ -1,5 +1,5 @@
 /*!
- * Open as Media Type Chrome Extension
+ * Force Media-Type
  *
  * Copyright 2012, Ori Livneh
  * Licensed under the BSD license; see LICENSE for more details.

@@ -1,11 +1,11 @@
 /*!
- * Open as Media Type Chrome Extension
+ * Force Media-Type
  *
  * Copyright 2012, Ori Livneh
  * Licensed under the BSD license; see LICENSE for more details.
  */
 
-/*jslint maxerr: 50, maxlen: 80, indent: 4 */
+/*jslint regexp: true, browser: true, maxerr: 50, indent: 4 */
 /*global chrome: true */
 
 (function () {
@@ -78,13 +78,22 @@
             // Create right-click context menu items
             var extra_types = (localStorage.extra_types || '').split('\n'),
                 types = uniquify(media_types.concat(extra_types)),
-                parent_id;
+                parent_id,
+                nonempty = function (string) {
+                    return (/[^\s]/).test(string);
+                };
 
+            // Strip blanks by searching for values that have no non-whitespace
+            // characters.
+            types = types.filter(nonempty);
+
+            // Create the parent
             parent_id = chrome.contextMenus.create({
                 title: "Open as media type\u2026",
                 contexts: ['link']
             });
 
+            // Create children
             types.forEach(function (media_type, index) {
                 // Create at separator before user-set media types
                 if (index === media_types.length) {
