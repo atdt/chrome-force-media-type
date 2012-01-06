@@ -1,4 +1,4 @@
-EXTNAME := extension
+EXTNAME := force-media-type
 KEYFILE := $(EXTNAME).pem
 CRXFILE := $(EXTNAME).crx
 EXTDIR  := $(EXTNAME)
@@ -18,6 +18,9 @@ all: pack
 pack:
 	$(CHROME) --pack-extension=$(CWD)/extension \
 	    --pack-extension-key=$(CWD)/extension.pem --no-message-box
+
+zipball:
+	zip $(EXTNAME)-$(VERSION) extension/*
 
 upload:
 	echo $(SIZE) $(VERSION)
