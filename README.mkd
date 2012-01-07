@@ -1,11 +1,19 @@
 Force Media-Type Chrome Extension
 =================================
 
-https://chrome.google.com/webstore/detail/dpfpbhhpecfkhkmponbmaldhfollibde
-This extension adds an item to the right-click menu that lets you force a link to open as a particular media type (or MIME, if you have a beard). This is primarily useful for working around annoying web hosts that insist that you download text files 
-link context (right-click) menu, allowing
-you to open it while forcing a particular internet media-type (or MIME, or content-type). Work around
-annoying web sites that force you to download source code or text files to view
-them rather than simply allowing you to view them in the browser.
+This extension adds an item to the right-click menu that lets you force a link
+to open as a particular media type (or MIME, if you're old-fashioned).
 
-https://chrome.google.com/webstore/detail/dpfpbhhpecfkhkmponbmaldhfollibde
+Why? Here's why: [hello_world.rb][helloworld]
+
+Chrome doesn't recognize the media-type `application/ruby`, so it downloads the
+file rather than displaying it. Grr.
+
+With this extension, you can right-click on the link and choose to open it as
+`text/plain`. It works by intercepting the HTTP headers of the response and
+replacing the content-type definition.
+
+You can build it yourself, or install it directly from the [Chrome Web Store][webstore].
+
+[helloworld]: http://cloud.github.com/downloads/atdt/chrome-force-media-type/hello_world.rb
+[webstore]: https://chrome.google.com/webstore/detail/dpfpbhhpecfkhkmponbmaldhfollibde
