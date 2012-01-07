@@ -1,7 +1,11 @@
 Force Media-Type Chrome Extension
 =================================
 
-This extension adds an entry to the link context (right-click) menu, allowing
-you to open it while forcing a particular media type (MIME). Work around
+https://chrome.google.com/webstore/detail/dpfpbhhpecfkhkmponbmaldhfollibde
+This extension adds an item to the right-click menu that lets you force a link to open as a particular media type (or MIME, if you have a beard). This is primarily useful for working around annoying web hosts that insist that you download text files 
+link context (right-click) menu, allowing
+you to open it while forcing a particular internet media-type (or MIME, or content-type). Work around
 annoying web sites that force you to download source code or text files to view
 them rather than simply allowing you to view them in the browser.
+
+https://chrome.google.com/webstore/detail/dpfpbhhpecfkhkmponbmaldhfollibde
