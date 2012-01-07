@@ -10,8 +10,8 @@
     "19": "icon-19.png", 
     "48": "icon-48.png"
   }, 
-  "background_page": "html/background.html", 
-  "options_page": "html/options.html", 
+  "background_page": "background.html", 
+  "options_page": "options.html", 
   "permissions": [
     "tabs", 
     "contextMenus", 
