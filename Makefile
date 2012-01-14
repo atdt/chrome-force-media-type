@@ -15,10 +15,3 @@ pack:
 
 zipball:
 	zip $(EXTNAME)-$(VERSION).zip $(EXTDIR)/*
-
-upload:
-	echo $(SIZE) $(VERSION)
-	curl -v \
-	    -u "$(GITHUB_USERNAME):$(GITHUB_PASSWORD)" \
-	    -d '{"name": "$(ZIPFILE)", "size": "$(SIZE)", "description": "Version $(VERSION)"}' \
-	    https://api.github.com/repos/$(GITHUB_USERNAME)/$(GITHUB_REPOSITORY)/downloads

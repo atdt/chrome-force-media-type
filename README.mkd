@@ -15,5 +15,8 @@ replacing the content-type definition.
 
 You can build it yourself, or install it directly from the [Chrome Web Store][webstore].
 
+*NOTE:* This extension requires Chrome 18 or better. Currently (13 Jan 2012)
+  this requires being subscribed to the dev channel.
+
 [helloworld]: http://cloud.github.com/downloads/atdt/chrome-force-media-type/hello_world.rb
 [webstore]: https://chrome.google.com/webstore/detail/dpfpbhhpecfkhkmponbmaldhfollibde
